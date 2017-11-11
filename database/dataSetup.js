@@ -28,8 +28,15 @@ var save = (obj, callback) => {
   callback()
 }
 
-var getEntry = (year, model, make, task) => {
-  return taskModel.find({})
+var getEntry = (yearInput, modelInput, makeInput, taskInput) => {
+  return taskModel.find({
+    year: yearInput,
+    model: modelInput,
+    make: makeInput,
+    task: taskInput}, function(err, data) {
+      return data;
+    })
 }
 
 module.exports.save = save;
+module.exports.getEntry = getEntry;

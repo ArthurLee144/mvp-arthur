@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "sudo ./node_modules/.bin/babel ./client/components --out-dir ./client/static --presets=es2015,react --ignore=node_modules --source-maps inline",
+    "build": "sudo ./node_modules/.bin/babel ./client --out-dir ./compiled --presets=es2015,react --ignore=node_modules --source-maps inline",
 
-    "build:watch": "sudo ./node_modules/.bin/babel ./client/components --out-dir ./client/static  --presets=es2015,react --ignore=node_modules  --source-maps inline --watch"
+    "build:watch": "sudo ./node_modules/.bin/babel ./client --out-dir ./compiled --presets=es2015,react --ignore=node_modules  --source-maps inline --watch"
   },
   "repository": {
     "type": "git",

@@ -14,7 +14,7 @@ onChange(event) {
     // console.log(props.searchFields)
 
     var name = event.target.name;
-    var value = event.target.value;
+    var value = event.target.value.toUpperCase();
 
 
 
@@ -38,7 +38,7 @@ onChange(event) {
   render() {
   return (
     <div>
-      <h4>What are you working on?</h4>
+      <h2>What are you working on?</h2>
         <form onSubmit={this.handleSubmit.bind(this)}>
           <label> Year:
                 <input type="text" name="year" placeholder="year" value={this.state.year} onChange={this.onChange.bind(this)} />

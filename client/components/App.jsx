@@ -44,9 +44,11 @@ console.log(this.state.searchFields)
         task:searchField.task
       }
     }).then((results) => {
-      console.log('yay')
-      this.state.currentProject = results.data
-      console.log(this.state.currentProject)
+      console.log('yay', this)
+      // this.state.currentProject = results.data[0]
+      this.setState({currentProject : results.data[0]})
+      // this.setState
+      // console.log('current ', this.state.currentProject)
     })
   }
 
@@ -69,13 +71,14 @@ console.log(this.state.searchFields)
   }
 
   render () {
-    console.log(this.props)
+
     return (
       <div>
         <h1>Welcome to ShadeTree</h1>
         <NewEntry onEnter={this.enter.bind(this)} />
         <Search onSearch={this.search.bind(this)} searchFields = {this.state.searchFields}
           onChange = {this.onChange.bind(this)} />
+        <Task currentProject = {this.state.currentProject} />
 
       </div>
     );

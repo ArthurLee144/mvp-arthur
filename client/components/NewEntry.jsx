@@ -14,16 +14,16 @@ class NewEntry extends React.Component {
   }
 
   onChange(event) {
-    console.log(this.state)
     event.preventDefault();
 
     var name = event.target.name;
-    var value = event.target.value;
+    var value = event.target.value.toUpperCase();
 
 
     this.state[name] = value
 
     this.setState({name})
+    console.log(this.state)
   }
 
   handleSubmit(event) {
@@ -44,7 +44,7 @@ class NewEntry extends React.Component {
           </label><br />
 
           <label> Make:
-                <input type="text" name="make" placeholder="make" value={this.state.make} onChange={this.onChange.bind(this)}/>
+                <input type="text" name="make" placeholder="make" value={this.state.make} onChange={this.onChange.bind(this)} />
           </label><br />
 
           <label> Model:

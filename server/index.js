@@ -7,7 +7,10 @@ var db = require('../database/dataSetup.js')
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-app.use(express.static(__dirname + '/../client/static'));
+console.log(__dirname + '/../')
+console.log('hello')
+app.use(express.static(__dirname + '/../'));
+// app.use(express.static(__dirname + '/../client/static'));
 
 
 // var postDb = (year, make, model, task, tools, notes, url) => {
@@ -31,8 +34,13 @@ app.post('/guides', function(req, res) {
 })
 
 app.get('/guides', function(req, res) {
-  console.log(req.body)
-res.end('poop')
+  console.log('search request from client', req.query);
+
+  db.getEntry(req.query.year, req.query.model, req.query.make, req.query.task).then((results) => {
+      res.send(JSON.stringify(results))
+    })
+
+
 })
 
 
