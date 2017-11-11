@@ -11,7 +11,8 @@ class App extends React.Component {
         model: '',
         task: ''
       },
-      currentProject: {}
+      currentProject: {},
+      motivation: ''
 
     };
 
@@ -44,11 +45,15 @@ console.log(this.state.searchFields)
         task:searchField.task
       }
     }).then((results) => {
-      console.log('yay', this)
-      // this.state.currentProject = results.data[0]
+      console.log('yay', results)
+      console.log(typeof results.data)
+      if (results.data.length < 1) {
+        alert("no records found for that task")
+      } else {
       this.setState({currentProject : results.data[0]})
-      // this.setState
-      // console.log('current ', this.state.currentProject)
+      this.setState({motivation: 'Go turn some wrenches!!!'})
+      }
+
     })
   }
 
@@ -78,7 +83,8 @@ console.log(this.state.searchFields)
         <NewEntry onEnter={this.enter.bind(this)} />
         <Search onSearch={this.search.bind(this)} searchFields = {this.state.searchFields}
           onChange = {this.onChange.bind(this)} />
-        <Task currentProject = {this.state.currentProject} />
+        <Task currentProject = {this.state.currentProject}
+          wrenches = {this.state.motivation} />
 
       </div>
     );

@@ -27,25 +27,57 @@ var Task = function (_React$Component) {
         React.createElement(
           'h2',
           null,
-          'Current Project: '
+          'Current Project: ',
+          this.props.currentProject.year,
+          ' ',
+          this.props.currentProject.make,
+          ' ',
+          this.props.currentProject.model,
+          ' ',
+          this.props.currentProject.task
         ),
         React.createElement(
           'div',
           null,
-          ' You will need: ',
+          React.createElement(
+            'b',
+            null,
+            'You will need: '
+          ),
           this.props.currentProject.tools
         ),
         React.createElement(
           'div',
           null,
-          ' Here are your notes: ',
+          React.createElement(
+            'b',
+            null,
+            'Here are your notes: '
+          ),
           this.props.currentProject.notes
         ),
         React.createElement(
           'div',
           null,
-          ' This is your best resource: ',
-          this.props.currentProject.url
+          React.createElement(
+            'b',
+            null,
+            'This is your best resource: '
+          ),
+          React.createElement(
+            'a',
+            { href: this.props.currentProject.url },
+            this.props.currentProject.url
+          )
+        ),
+        React.createElement(
+          'div',
+          null,
+          React.createElement(
+            'h3',
+            null,
+            this.props.wrenches
+          )
         )
       );
     }
@@ -55,4 +87,4 @@ var Task = function (_React$Component) {
 }(React.Component);
 
 window.Task = Task;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL2NsaWVudC9jb21wb25lbnRzL1Rhc2suanN4Il0sIm5hbWVzIjpbIlRhc2siLCJwcm9wcyIsImNvbnNvbGUiLCJsb2ciLCJjdXJyZW50UHJvamVjdCIsInRvb2xzIiwibm90ZXMiLCJ1cmwiLCJSZWFjdCIsIkNvbXBvbmVudCIsIndpbmRvdyJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztJQUFNQSxJOzs7QUFDSixnQkFBWUMsS0FBWixFQUFtQjtBQUFBOztBQUFBLHVHQUNYQSxLQURXO0FBRWxCOzs7OzZCQUVRO0FBQ1BDLGNBQVFDLEdBQVIsQ0FBWSxjQUFaLEVBQTRCLEtBQUtGLEtBQUwsQ0FBV0csY0FBdkM7QUFDQSxhQUNFO0FBQUE7QUFBQTtBQUFLO0FBQUE7QUFBQTtBQUFBO0FBQUEsU0FBTDtBQUVFO0FBQUE7QUFBQTtBQUFBO0FBQXNCLGVBQUtILEtBQUwsQ0FBV0csY0FBWCxDQUEwQkM7QUFBaEQsU0FGRjtBQUlFO0FBQUE7QUFBQTtBQUFBO0FBQTRCLGVBQUtKLEtBQUwsQ0FBV0csY0FBWCxDQUEwQkU7QUFBdEQsU0FKRjtBQU1FO0FBQUE7QUFBQTtBQUFBO0FBQW1DLGVBQUtMLEtBQUwsQ0FBV0csY0FBWCxDQUEwQkc7QUFBN0Q7QUFORixPQURGO0FBY0Q7Ozs7RUFyQmdCQyxNQUFNQyxTOztBQTBCdkJDLE9BQU9WLElBQVAsR0FBY0EsSUFBZCIsImZpbGUiOiJUYXNrLmpzIiwic291cmNlc0NvbnRlbnQiOlsiY2xhc3MgVGFzayBleHRlbmRzIFJlYWN0LkNvbXBvbmVudCB7XG4gIGNvbnN0cnVjdG9yKHByb3BzKSB7XG4gICAgc3VwZXIocHJvcHMpO1xuICB9XG5cbiAgcmVuZGVyKCkge1xuICAgIGNvbnNvbGUubG9nKCdUYXNrIHByb3BzIDEnLCB0aGlzLnByb3BzLmN1cnJlbnRQcm9qZWN0KVxuICAgIHJldHVybiAoXG4gICAgICA8ZGl2PjxoMj5DdXJyZW50IFByb2plY3Q6IDwvaDI+XG5cbiAgICAgICAgPGRpdj4gWW91IHdpbGwgbmVlZDoge3RoaXMucHJvcHMuY3VycmVudFByb2plY3QudG9vbHN9XG4gICAgICAgIDwvZGl2PlxuICAgICAgICA8ZGl2PiBIZXJlIGFyZSB5b3VyIG5vdGVzOiB7dGhpcy5wcm9wcy5jdXJyZW50UHJvamVjdC5ub3Rlc31cbiAgICAgICAgPC9kaXY+XG4gICAgICAgIDxkaXY+IFRoaXMgaXMgeW91ciBiZXN0IHJlc291cmNlOiB7dGhpcy5wcm9wcy5jdXJyZW50UHJvamVjdC51cmx9XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9kaXY+XG5cblxuXG4gICAgICApXG4gIH1cbn1cblxuXG5cbiAgd2luZG93LlRhc2sgPSBUYXNrOyJdfQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL2NsaWVudC9jb21wb25lbnRzL1Rhc2suanN4Il0sIm5hbWVzIjpbIlRhc2siLCJwcm9wcyIsImNvbnNvbGUiLCJsb2ciLCJjdXJyZW50UHJvamVjdCIsInllYXIiLCJtYWtlIiwibW9kZWwiLCJ0YXNrIiwidG9vbHMiLCJub3RlcyIsInVybCIsIndyZW5jaGVzIiwiUmVhY3QiLCJDb21wb25lbnQiLCJ3aW5kb3ciXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7SUFBTUEsSTs7O0FBQ0osZ0JBQVlDLEtBQVosRUFBbUI7QUFBQTs7QUFBQSx1R0FDWEEsS0FEVztBQUVsQjs7Ozs2QkFFUTtBQUNQQyxjQUFRQyxHQUFSLENBQVksY0FBWixFQUE0QixLQUFLRixLQUFMLENBQVdHLGNBQXZDO0FBQ0EsYUFDRTtBQUFBO0FBQUE7QUFBSztBQUFBO0FBQUE7QUFBQTtBQUFzQixlQUFLSCxLQUFMLENBQVdHLGNBQVgsQ0FBMEJDLElBQWhEO0FBQUE7QUFBdUQsZUFBS0osS0FBTCxDQUFXRyxjQUFYLENBQTBCRSxJQUFqRjtBQUFBO0FBQXdGLGVBQUtMLEtBQUwsQ0FBV0csY0FBWCxDQUEwQkcsS0FBbEg7QUFBQTtBQUEwSCxlQUFLTixLQUFMLENBQVdHLGNBQVgsQ0FBMEJJO0FBQXBKLFNBQUw7QUFFRTtBQUFBO0FBQUE7QUFBSztBQUFBO0FBQUE7QUFBQTtBQUFBLFdBQUw7QUFBNEIsZUFBS1AsS0FBTCxDQUFXRyxjQUFYLENBQTBCSztBQUF0RCxTQUZGO0FBSUU7QUFBQTtBQUFBO0FBQUs7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQUFMO0FBQWtDLGVBQUtSLEtBQUwsQ0FBV0csY0FBWCxDQUEwQk07QUFBNUQsU0FKRjtBQU1FO0FBQUE7QUFBQTtBQUFLO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FBTDtBQUF3QztBQUFBO0FBQUEsY0FBRyxNQUFNLEtBQUtULEtBQUwsQ0FBV0csY0FBWCxDQUEwQk8sR0FBbkM7QUFBMEMsaUJBQUtWLEtBQUwsQ0FBV0csY0FBWCxDQUEwQk87QUFBcEU7QUFBeEMsU0FORjtBQVFFO0FBQUE7QUFBQTtBQUNBO0FBQUE7QUFBQTtBQUFLLGlCQUFLVixLQUFMLENBQVdXO0FBQWhCO0FBREE7QUFSRixPQURGO0FBaUJEOzs7O0VBeEJnQkMsTUFBTUMsUzs7QUE2QnZCQyxPQUFPZixJQUFQLEdBQWNBLElBQWQiLCJmaWxlIjoiVGFzay5qcyIsInNvdXJjZXNDb250ZW50IjpbImNsYXNzIFRhc2sgZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQge1xuICBjb25zdHJ1Y3Rvcihwcm9wcykge1xuICAgIHN1cGVyKHByb3BzKTtcbiAgfVxuXG4gIHJlbmRlcigpIHtcbiAgICBjb25zb2xlLmxvZygnVGFzayBwcm9wcyAxJywgdGhpcy5wcm9wcy5jdXJyZW50UHJvamVjdClcbiAgICByZXR1cm4gKFxuICAgICAgPGRpdj48aDI+Q3VycmVudCBQcm9qZWN0OiB7dGhpcy5wcm9wcy5jdXJyZW50UHJvamVjdC55ZWFyfSB7dGhpcy5wcm9wcy5jdXJyZW50UHJvamVjdC5tYWtlfSB7dGhpcy5wcm9wcy5jdXJyZW50UHJvamVjdC5tb2RlbH0ge3RoaXMucHJvcHMuY3VycmVudFByb2plY3QudGFza308L2gyPlxuXG4gICAgICAgIDxkaXY+PGI+WW91IHdpbGwgbmVlZDogPC9iPnt0aGlzLnByb3BzLmN1cnJlbnRQcm9qZWN0LnRvb2xzfVxuICAgICAgICA8L2Rpdj5cbiAgICAgICAgPGRpdj48Yj5IZXJlIGFyZSB5b3VyIG5vdGVzOiA8L2I+e3RoaXMucHJvcHMuY3VycmVudFByb2plY3Qubm90ZXN9XG4gICAgICAgIDwvZGl2PlxuICAgICAgICA8ZGl2PjxiPlRoaXMgaXMgeW91ciBiZXN0IHJlc291cmNlOiA8L2I+PGEgaHJlZj17dGhpcy5wcm9wcy5jdXJyZW50UHJvamVjdC51cmx9ID57dGhpcy5wcm9wcy5jdXJyZW50UHJvamVjdC51cmx9PC9hPlxuICAgICAgICA8L2Rpdj5cbiAgICAgICAgPGRpdj5cbiAgICAgICAgPGgzPnt0aGlzLnByb3BzLndyZW5jaGVzfTwvaDM+XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9kaXY+XG5cblxuXG4gICAgICApXG4gIH1cbn1cblxuXG5cbiAgd2luZG93LlRhc2sgPSBUYXNrOyJdfQ==

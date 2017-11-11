@@ -6,13 +6,16 @@ class Task extends React.Component {
   render() {
     console.log('Task props 1', this.props.currentProject)
     return (
-      <div><h2>Current Project: </h2>
+      <div><h2>Current Project: {this.props.currentProject.year} {this.props.currentProject.make} {this.props.currentProject.model} {this.props.currentProject.task}</h2>
 
-        <div> You will need: {this.props.currentProject.tools}
+        <div><b>You will need: </b>{this.props.currentProject.tools}
         </div>
-        <div> Here are your notes: {this.props.currentProject.notes}
+        <div><b>Here are your notes: </b>{this.props.currentProject.notes}
         </div>
-        <div> This is your best resource: {this.props.currentProject.url}
+        <div><b>This is your best resource: </b><a href={this.props.currentProject.url} >{this.props.currentProject.url}</a>
+        </div>
+        <div>
+        <h3>{this.props.wrenches}</h3>
         </div>
       </div>
 

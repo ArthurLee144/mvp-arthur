@@ -7,8 +7,7 @@ var db = require('../database/dataSetup.js')
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-console.log(__dirname + '/../')
-console.log('hello')
+
 app.use(express.static(__dirname + '/../'));
 // app.use(express.static(__dirname + '/../client/static'));
 
@@ -37,6 +36,11 @@ app.get('/guides', function(req, res) {
   console.log('search request from client', req.query);
 
   db.getEntry(req.query.year, req.query.model, req.query.make, req.query.task).then((results) => {
+    console.log('server results', results)
+    // if (results.length < 1) {
+    //   res.send("no records found for that task")
+    // }
+
       res.send(JSON.stringify(results))
     })
 
