@@ -5,12 +5,6 @@ class App extends React.Component {
     super(props);
     this.state = {
       task: '',
-      searchFields: {
-        year: '',
-        make: '',
-        model: '',
-        task: ''
-      },
       currentProject: {},
       motivation: ''
 
@@ -81,8 +75,8 @@ console.log(this.state.searchFields)
       <div>
         <h1>Welcome to ShadeTree</h1>
         <NewEntry onEnter={this.enter.bind(this)} />
-        <Search onSearch={this.search.bind(this)} searchFields = {this.state.searchFields}
-          onChange = {this.onChange.bind(this)} />
+        <Search onSearch={this.search.bind(this)}
+                onChange = {this.onChange.bind(this)} />
         <Task currentProject = {this.state.currentProject}
           wrenches = {this.state.motivation} />
 
