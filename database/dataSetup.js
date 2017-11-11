@@ -8,7 +8,7 @@ db.once('open', function() {
 })
 
 var taskSchema = mongoose.Schema({
-  year: Number,
+  year: String,
   make: String,
   model: String,
   task: String,
@@ -16,3 +16,20 @@ var taskSchema = mongoose.Schema({
   notes: String,
   url: String
 })
+
+var taskModel = mongoose.model('Task', taskSchema);
+
+var save = (obj, callback) => {
+  var task = new taskModel(obj);
+  task.save((err, data) => {
+    if(err) {console.log('error', err)}
+  })
+
+  callback()
+}
+
+var getEntry = (year, model, make, task) => {
+  return taskModel.find({})
+}
+
+module.exports.save = save;
