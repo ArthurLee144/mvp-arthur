@@ -38,7 +38,7 @@ onChange(event) {
   render() {
   return (
     <div>
-      <h4>Search for Task</h4>
+      <h4>What are you working on?</h4>
         <form onSubmit={this.handleSubmit.bind(this)}>
           <label> Year:
                 <input type="text" name="year" placeholder="year" value={this.state.year} onChange={this.onChange.bind(this)} />

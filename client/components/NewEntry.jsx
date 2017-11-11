@@ -37,7 +37,7 @@ class NewEntry extends React.Component {
 
     return (
       <div>
-        <h2>Add new Task</h2>
+        <h2>What did you complete today?</h2>
         <form onSubmit={this.handleSubmit.bind(this)}>
           <label> Year:
                 <input type="text" name="year" placeholder="year" value={this.state.year} onChange={this.onChange.bind(this)} />

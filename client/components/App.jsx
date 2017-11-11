@@ -76,6 +76,7 @@ console.log(this.state.searchFields)
         <NewEntry onEnter={this.enter.bind(this)} />
         <Search onSearch={this.search.bind(this)} searchFields = {this.state.searchFields}
           onChange = {this.onChange.bind(this)} />
+
       </div>
     );
   }
